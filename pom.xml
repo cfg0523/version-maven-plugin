@@ -6,7 +6,25 @@
     <groupId>com.techsen.plugin</groupId>
     <artifactId>version-maven-plugin</artifactId>
     <version>1.0</version>
-    <packaging>maven-plugin</packaging>
+    <packaging>jar</packaging>
+    
+    <scm>
+        <connection>scm:git:git@125.1.0.40:version-maven-plugin.git</connection>
+        <developerConnection>scm:git:git@125.1.0.40:version-maven-plugin.git</developerConnection>
+        <url>scm:git:git@125.1.0.40:version-maven-plugin.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>${snapshots.id}</id>
+            <url>${snapshots.url}</url>
+        </snapshotRepository>
+        <repository>
+            <id>${releases.id}</id>
+            <url>${releases.url}</url>
+        </repository>
+    </distributionManagement>
 
     <dependencies>
         <dependency>
@@ -21,7 +39,7 @@
             <version>3.4</version>
             <scope>provided</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.maven.scm</groupId>
             <artifactId>maven-scm-provider-gitexe</artifactId>

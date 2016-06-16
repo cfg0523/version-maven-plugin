@@ -1,0 +1,17 @@
+.git
+
+**/.settings
+**/.project
+**/.pydevproject
+**/.classpath
+**/.class
+
+**/target
+**/classes
+
+**/log*.txt
+**/*.log
+
+/target
+release.properties
+pom.xml.releaseBackup
